@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "allowedRoles": ["user"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["user"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/github"
+    }
+  }
+}
