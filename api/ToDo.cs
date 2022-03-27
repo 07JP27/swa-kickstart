@@ -66,7 +66,7 @@ namespace api
             {
                 Console.WriteLine(ex.Message);
                 //log error
-                log.LogError(1,ex,"Error creating todo item");
+                log.LogError(1212,ex,"Error creating todo item");
                 return new StatusCodeResult(500);
             }
         }
