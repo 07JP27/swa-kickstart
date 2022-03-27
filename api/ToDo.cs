@@ -59,13 +59,14 @@ namespace api
             try
             {
                 var item = await _toDoRepo.CreateToDoItems(payload.ToDo, principal);
-                return new OkResult();
+                throw new NotImplementedException();
+                //return new OkResult();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 //log error
-                //log.LogError(1,ex,"Error creating todo item");
+                log.LogError(1,ex,"Error creating todo item");
                 return new StatusCodeResult(500);
             }
         }
